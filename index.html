@@ -1,28 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para William, con todo mi amor ❤️</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gracias por existir ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<canvas id="stars"></canvas>
-<audio id="bgMusic" loop><source src="music/turning-page.mp3" type="audio/mpeg"></audio>
-<button id="musicButton" class="music-button">♫</button>
+  <canvas id="stars"></canvas>
+  <audio id="bgMusic" loop preload="auto">
+    <source src="music/turning-page.mp3" type="audio/mpeg">
+  </audio>
+  <button id="musicButton" class="music-button" aria-label="Música">♫</button>
 
-<main id="intro" class="scene active"><section class="intro-box"><p id="introText">Hay personas que llegan a nuestra vida<br>y la cambian para siempre.<br><br>Esta es una pequeña forma de darte las gracias<br>por haber llegado a la mía.</p><h1 id="william"></h1><h2 id="thanks"></h2><button id="startButton">✨ Entrar a este pequeño rincón de mi corazón</button></section></main>
+  <main id="intro" class="scene active">
+    <section class="intro-box">
+      <p id="introText">Hay personas que llegan a nuestra vida<br>y la cambian para siempre.<br><br>Esta es una pequeña forma de darte las gracias<br>por haber llegado a la mía.</p>
+      <h1 id="william"></h1>
+      <h2 id="thanks"></h2>
+      <p id="thanksEnglish" class="english-line"></p>
+      <button id="startButton">✨ Entrar / Enter</button>
+    </section>
+  </main>
 
-<section id="envelopeScene" class="scene"><p id="message1" class="scene-message">Hay palabras que no quería que el tiempo se llevara...</p><p id="message2" class="scene-message">Por eso decidí guardarlas aquí.</p><div id="envelope"><div class="envelope-back"></div><div class="envelope-letter-small">Para William<br><span>con todo mi amor</span></div><div class="envelope-front"></div><div class="envelope-flap"></div><div class="wax-seal">W & W</div></div></section>
-<section id="letterScene" class="scene"><article class="letter-paper"><p id="letterText"></p><p id="letterSignature"></p></article></section>
-<section id="memoriesScene" class="scene"><p id="memoryIntro1" class="scene-message">Porque las palabras también pueden convertirse en recuerdos...</p><p id="memoryIntro2" class="scene-message">Hay recuerdos que nunca quisiera dejar de vivir...</p><div id="memoryStack"></div><p id="memoryFinalText"></p></section>
-<section id="dreamsScene" class="scene"><p id="dreamIntro1" class="scene-message">Dicen que algunas personas llegan para formar parte de nuestros recuerdos...</p><p id="dreamIntro2" class="scene-message">Pero hay otras que llegan para convertirse también en nuestros sueños.</p><div id="dreamSky"></div><p id="dreamText"></p></section>
-<section id="birthdayScene" class="scene"><p id="birthdayIntro" class="scene-message">Hoy no solo celebramos un cumpleaños...</p><p id="birthdayIntro2" class="scene-message">Celebramos que el mundo tuvo la enorme suerte de conocerte.</p><div id="cakeBox"><div class="cake-plate"></div><div class="cake"><div class="candle candle1"><span class="flame"></span></div><div class="candle candle2"><span class="flame"></span></div><div class="candle candle3"><span class="flame"></span></div></div></div><h2 id="happyBirthday">Feliz cumpleaños, mi amor ❤️</h2><button id="wishButton">✨ Pide un deseo</button><p id="wishMessage"></p></section>
-<section id="heartRoomScene" class="scene"><h2 id="heartRoomTitle">❤️ El Rincón del Corazón</h2><p id="heartRoomSubtitle">Aquí guardé las cosas que nunca quería que el tiempo se llevara...</p><div id="heartLibrary"><div class="heartBook" id="bookReasons"><span>🎁</span><h3>Pequeñas cosas que quizá nunca te dije...</h3></div><div class="heartBook" id="bookChanges"><span>📖</span><h3>Lo que cambiaste en mí</h3></div><div class="heartBook" id="bookLetter"><span>💌</span><h3>Ábreme solo cuando realmente lo necesites</h3></div></div><button id="goToEpilogue">Volver a las estrellas ✨</button></section>
-<div id="bookModal" class="bookModal"><div class="bookContent"><button id="closeBook" class="closeBook">✕</button><h2 id="modalTitle"></h2><div id="modalBody"></div><button id="nextReason" class="hidden">✨ Descubrir otra</button></div></div>
-<section id="epilogueScene" class="scene"><p id="epilogueLine1" class="scene-message">Este pequeño rincón siempre estará aquí para ti.</p><h2 id="finalThanks">Gracias por existir.</h2></section>
-<!-- Gracias por existir. Con todo mi corazón, Tu Zully ❤️ -->
-<script src="script.js"></script>
+  <section id="envelopeScene" class="scene">
+    <p id="message1" class="scene-message">Hay palabras que no quería que el tiempo se llevara...</p>
+    <p id="message2" class="scene-message">Por eso decidí guardarlas aquí.</p>
+    <p class="english-line scene-helper">Take your time. This place will wait for you.</p>
+    <div id="envelope">
+      <div class="envelope-back"></div>
+      <div class="envelope-letter-small">Para William<br><span>con todo mi amor</span></div>
+      <div class="envelope-front"></div>
+      <div class="envelope-flap"></div>
+      <div class="wax-seal">W & W</div>
+    </div>
+  </section>
+
+  <section id="letterScene" class="scene">
+    <article class="letter-paper">
+      <p id="letterText"></p>
+      <p id="letterSignature"></p>
+      <button id="letterContinue" class="continue-button hidden">Continuar / Continue →</button>
+    </article>
+  </section>
+
+  <section id="memoriesScene" class="scene">
+    <p id="memoryIntro1" class="scene-message">Porque las palabras también pueden convertirse en recuerdos...</p>
+    <p id="memoryIntro2" class="scene-message">Hay recuerdos que nunca quisiera dejar de vivir...</p>
+    <div id="memoryStack"></div>
+    <div id="memoryControls" class="memory-controls hidden">
+      <button id="prevMemory">← Anterior</button>
+      <button id="nextMemory">Siguiente / Next →</button>
+    </div>
+    <p id="memoryFinalText"></p>
+    <button id="memoriesContinue" class="continue-button hidden">Continuar / Continue →</button>
+  </section>
+
+  <section id="dreamsScene" class="scene">
+    <p id="dreamIntro1" class="scene-message">Dicen que algunas personas llegan para formar parte de nuestros recuerdos...</p>
+    <p id="dreamIntro2" class="scene-message">Pero hay otras que llegan para convertirse también en nuestros sueños.</p>
+    <p class="english-line scene-helper">Touch each star and discover a dream.</p>
+    <div id="dreamSky"></div>
+    <p id="dreamText"></p>
+    <button id="dreamsContinue" class="continue-button hidden">Seguir eligiéndonos / Keep choosing us →</button>
+  </section>
+
+  <section id="birthdayScene" class="scene">
+    <p id="birthdayIntro" class="scene-message">Hoy no solo celebramos un cumpleaños...</p>
+    <p id="birthdayIntro2" class="scene-message">Celebramos que el mundo tuvo la enorme suerte de conocerte.</p>
+    <p class="english-line scene-helper">Today we celebrate the gift of your existence.</p>
+    <div id="cakeBox">
+      <div class="cake-plate"></div>
+      <div class="cake">
+        <div class="candle candle1"><span class="flame"></span></div>
+        <div class="candle candle2"><span class="flame"></span></div>
+        <div class="candle candle3"><span class="flame"></span></div>
+      </div>
+    </div>
+    <h2 id="happyBirthday">Feliz cumpleaños, mi amor ❤️</h2>
+    <button id="wishButton">✨ Pide un deseo / Make a wish</button>
+    <p id="wishMessage"></p>
+    <button id="birthdayContinue" class="continue-button hidden">Continuar / Continue →</button>
+  </section>
+
+  <section id="heartRoomScene" class="scene">
+    <h2 id="heartRoomTitle">❤️ El Rincón del Corazón</h2>
+    <p id="heartRoomSubtitle">Aquí guardé las cosas que nunca quería que el tiempo se llevara...</p>
+    <p class="english-line scene-helper">Here I kept the things I never wanted time to take away.</p>
+    <div id="heartLibrary">
+      <div class="heartBook" id="bookReasons"><span>🎁</span><h3>Pequeñas cosas que quizá nunca te dije...</h3></div>
+      <div class="heartBook" id="bookChanges"><span>📖</span><h3>Lo que cambiaste en mí</h3></div>
+      <div class="heartBook" id="bookLetter"><span>💌</span><h3>Ábreme solo cuando realmente lo necesites</h3></div>
+    </div>
+    <button id="goToEpilogue" class="continue-button hidden">Volver a mirar las estrellas ✨</button>
+  </section>
+
+  <div id="bookModal" class="bookModal" aria-hidden="true">
+    <div class="bookContent">
+      <button id="closeBook" class="closeBook">✕</button>
+      <h2 id="modalTitle"></h2>
+      <div id="modalBody"></div>
+      <button id="nextReason" class="hidden">✨ Descubrir otra</button>
+    </div>
+  </div>
+
+  <section id="epilogueScene" class="scene">
+    <p id="epilogueLine1" class="scene-message">Este pequeño rincón siempre estará aquí para ti.</p>
+    <p id="epilogueLine2" class="english-line">Whenever you need to remember how deeply you are loved.</p>
+    <h2 id="finalThanks">Gracias por existir.</h2>
+    <p id="finalThanksEnglish" class="english-line">Thank you for existing.</p>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
